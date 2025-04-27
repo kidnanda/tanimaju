@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tani Maju</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tani Maju</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pemesanan.html">Pemesanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <div class="container mt-5 py-5">
+        <h2 class="text-center mb-4">Blog & Artikel</h2>
+        
+        <!-- Search and Categories -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Cari artikel...">
+                    <button class="btn btn-success" type="button" onclick="searchArticles()">Cari</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" id="categorySelect" onchange="filterArticles()">
+                    <option value="all" selected>Pilih Kategori</option>
+                    <option value="tips">Tips Bertani</option>
+                    <option value="teknologi">Teknologi Pertanian</option>
+                    <option value="berita">Berita Pertanian</option>
+                    <option value="kesehatan">Kesehatan Tanaman</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Blog Posts -->
+        <div class="row" id="blogPosts">
+            <!-- Blog Post 1 -->
+            <div class="col-md-6 mb-4 blog-item" data-category="teknologi">
+                <div class="card blog-post h-100">
+                    <img src="assets/img/blog/pertanian-organik.jpg" class="card-img-top" alt="Pertanian Organik">
+                    <div class="card-body">
+                        <h5 class="card-title">Mengenal Lebih Dalam Tentang Pertanian Organik</h5>
+                        <p class="text-muted">
+                            <small>
+                                <i class="fas fa-calendar-alt"></i> 15 Maret 2024 |
+                                <i class="fas fa-user"></i> Admin
+                            </small>
+                        </p>
+                        <p class="card-text">Pertanian organik adalah sistem pertanian yang mengutamakan penggunaan bahan-bahan alami tanpa pestisida kimia...</p>
+                        <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="col-md-6 mb-4 blog-item" data-category="tips">
+                <div class="card blog-post h-100">
+                    <img src="assets/img/blog/hidroponik.jpg" class="card-img-top" alt="Sistem Hidroponik">
+                    <div class="card-body">
+                        <h5 class="card-title">Panduan Lengkap Sistem Hidroponik untuk Pemula</h5>
+                        <p class="text-muted">
+                            <small>
+                                <i class="fas fa-calendar-alt"></i> 10 Maret 2024 |
+                                <i class="fas fa-user"></i> Admin
+                            </small>
+                        </p>
+                        <p class="card-text">Hidroponik adalah metode bercocok tanam tanpa menggunakan media tanah. Sistem ini sangat cocok untuk area perkotaan...</p>
+                        <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="col-md-6 mb-4 blog-item" data-category="teknologi">
+                <div class="card blog-post h-100">
+                    <img src="assets/img/blog/smart-farming.jpg" class="card-img-top" alt="Smart Farming">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Farming: Masa Depan Pertanian Indonesia</h5>
+                        <p class="text-muted">
+                            <small>
+                                <i class="fas fa-calendar-alt"></i> 5 Maret 2024 |
+                                <i class="fas fa-user"></i> Admin
+                            </small>
+                        </p>
+                        <p class="card-text">Smart farming mengintegrasikan teknologi modern seperti IoT dan AI dalam praktik pertanian untuk meningkatkan hasil panen...</p>
+                        <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="col-md-6 mb-4 blog-item" data-category="tips">
+                <div class="card blog-post h-100">
+                    <img src="assets/img/blog/pupuk-organik.jpg" class="card-img-top" alt="Pupuk Organik">
+                    <div class="card-body">
+                        <h5 class="card-title">Cara Membuat Pupuk Organik dari Limbah Rumah Tangga</h5>
+                        <p class="text-muted">
+                            <small>
+                                <i class="fas fa-calendar-alt"></i> 1 Maret 2024 |
+                                <i class="fas fa-user"></i> Admin
+                            </small>
+                        </p>
+                        <p class="card-text">Limbah rumah tangga dapat diolah menjadi pupuk organik berkualitas. Simak panduan lengkapnya dalam artikel ini...</p>
+                        <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Tentang Kami</h5>
+                    <p>Tani Maju adalah UMKM yang bergerak di bidang pertanian dengan fokus pada produk berkualitas dan ramah lingkungan.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Kontak</h5>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@tanimaju.com<br>
+                        <i class="fas fa-phone me-2"></i> +62 123 4567 890<br>
+                        <i class="fas fa-map-marker-alt me-2"></i> Yogyakarta, Indonesia
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>Ananda Buchori XII RPL © 2025 | Rekayasa Perangkat Lunak <a href="https://smkmuh1-yog.sch.id/" class="text-white" target="_blank">SMK Muhammadiyah 1 Yogyakarta</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Blog Filter and Search Script -->
+    <script>
+        function searchArticles() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const articles = document.querySelectorAll('.blog-item');
+            
+            articles.forEach(article => {
+                const title = article.querySelector('.card-title').textContent.toLowerCase();
+                const content = article.querySelector('.card-text').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        function filterArticles() {
+            const category = document.getElementById('categorySelect').value;
+            const articles = document.querySelectorAll('.blog-item');
+            
+            articles.forEach(article => {
+                if (category === 'all' || article.getAttribute('data-category') === category) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        // Add enter key support for search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchArticles();
+            }
+        });
+    </script>
+</body>
+</html> 

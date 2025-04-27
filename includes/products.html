@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Data</title>
+</head>
+<body>
+    <script>
+        const products = {
+            sayuran: [
+                {
+                    image: "assets/img/products/sayur-organik.jpg",
+                    title: "Sayur Organik Premium",
+                    description: "Sayuran segar organik berkualitas tinggi, dipetik langsung dari kebun kami.",
+                    price: "Rp 25.000/kg",
+                    category: "Sayuran"
+                },
+                {
+                    image: "assets/img/products/bayam-organik.jpg",
+                    title: "Bayam Organik",
+                    description: "Bayam segar organik kaya nutrisi, cocok untuk berbagai masakan sehat.",
+                    price: "Rp 8.000/ikat",
+                    category: "Sayuran"
+                },
+                {
+                    image: "assets/img/products/wortel-premium.jpg",
+                    title: "Wortel Premium",
+                    description: "Wortel segar kaya vitamin A, hasil panen terbaik dari petani lokal.",
+                    price: "Rp 12.000/kg",
+                    category: "Sayuran"
+                }
+            ],
+            buah: [
+                {
+                    image: "assets/img/products/mangga-harum-manis.jpg",
+                    title: "Mangga Harum Manis",
+                    description: "Mangga harum manis super manis, langsung dari kebun terpercaya.",
+                    price: "Rp 35.000/kg",
+                    category: "Buah-buahan"
+                },
+                {
+                    image: "assets/img/products/jeruk-mandarin.jpg",
+                    title: "Jeruk Mandarin Segar",
+                    description: "Jeruk mandarin manis dan segar, kaya vitamin C untuk kesehatan.",
+                    price: "Rp 28.000/kg",
+                    category: "Buah-buahan"
+                },
+                {
+                    image: "assets/img/products/pisang-raja.jpg",
+                    title: "Pisang Raja Premium",
+                    description: "Pisang raja matang sempurna, manis dan lembut.",
+                    price: "Rp 20.000/sisir",
+                    category: "Buah-buahan"
+                }
+            ],
+            beras: [
+                {
+                    image: "assets/img/products/beras-putih.jpg",
+                    title: "Beras Putih Premium",
+                    description: "Beras putih premium berkualitas tinggi dari petani lokal terpercaya.",
+                    price: "Rp 15.000/kg",
+                    category: "Beras"
+                },
+                {
+                    image: "assets/img/products/beras-merah.jpg",
+                    title: "Beras Merah Organik",
+                    description: "Beras merah organik kaya serat dan nutrisi untuk pola hidup sehat.",
+                    price: "Rp 20.000/kg",
+                    category: "Beras"
+                },
+                {
+                    image: "assets/img/products/beras-hitam.jpg",
+                    title: "Beras Hitam Premium",
+                    description: "Beras hitam premium kaya antioksidan, cocok untuk diet sehat.",
+                    price: "Rp 25.000/kg",
+                    category: "Beras"
+                }
+            ],
+            rempah: [
+                {
+                    image: "assets/img/products/jahe-merah.jpg",
+                    title: "Jahe Merah Pilihan",
+                    description: "Jahe merah berkualitas tinggi untuk jamu dan minuman sehat.",
+                    price: "Rp 15.000/ons",
+                    category: "Rempah-rempah"
+                },
+                {
+                    image: "assets/img/products/kunyit.jpg",
+                    title: "Kunyit Premium",
+                    description: "Kunyit premium berkhasiat tinggi untuk jamu tradisional.",
+                    price: "Rp 10.000/ons",
+                    category: "Rempah-rempah"
+                },
+                {
+                    image: "assets/img/products/lengkuas.jpg",
+                    title: "Lengkuas Segar",
+                    description: "Lengkuas segar berkualitas untuk bumbu masakan tradisional.",
+                    price: "Rp 8.000/ons",
+                    category: "Rempah-rempah"
+                }
+            ]
+        };
+
+        // Function to get all products
+        function getAllProducts() {
+            return [
+                ...products.sayuran,
+                ...products.buah,
+                ...products.beras,
+                ...products.rempah
+            ];
+        }
+
+        // Function to get products by category
+        function getProductsByCategory(category) {
+            return products[category] || [];
+        }
+    </script>
+</body>
+</html> 

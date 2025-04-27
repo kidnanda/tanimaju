@@ -1,0 +1,72 @@
+/* Custom Styles */
+body {
+    padding-top: 56px;
+}
+
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    color: #198754;
+    margin-bottom: 20px;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Product card styles */
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Blog post styles */
+.blog-post img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Profile page styles */
+.profile-image {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    .hero-section img {
+        margin-top: 30px;
+    }
+} 

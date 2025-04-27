@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - Tani Maju</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tani Maju</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pemesanan.html">Pemesanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Order Section -->
+    <div class="container mt-5 py-5">
+        <h2 class="text-center mb-4">Informasi Pemesanan</h2>
+
+        <!-- Order Steps -->
+        <div class="row mb-5">
+            <div class="col-md-4 text-center mb-4">
+                <div class="bg-light p-4 rounded-3 h-100">
+                    <i class="fas fa-shopping-cart fa-3x text-success mb-3"></i>
+                    <h4>1. Pilih Produk</h4>
+                    <p>Pilih produk yang Anda inginkan dari katalog kami dengan berbagai pilihan kategori.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="bg-light p-4 rounded-3 h-100">
+                    <i class="fas fa-file-alt fa-3x text-success mb-3"></i>
+                    <h4>2. Isi Form Pemesanan</h4>
+                    <p>Lengkapi form pemesanan dengan data diri dan alamat pengiriman yang valid.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="bg-light p-4 rounded-3 h-100">
+                    <i class="fas fa-truck fa-3x text-success mb-3"></i>
+                    <h4>3. Pengiriman</h4>
+                    <p>Produk akan dikemas dengan aman dan dikirim ke alamat tujuan Anda.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Form Pemesanan</h4>
+                        <form id="orderForm" onsubmit="return validateForm(event)">
+                            <div class="mb-3">
+                                <label class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" required>
+                                <div class="invalid-feedback">Nama lengkap harus diisi</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Email tidak valid</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">No. Telepon</label>
+                                <input type="tel" class="form-control" id="telepon" pattern="[0-9]{10,13}" required>
+                                <div class="invalid-feedback">Nomor telepon harus 10-13 digit</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Alamat Pengiriman</label>
+                                <textarea class="form-control" id="alamat" rows="3" required></textarea>
+                                <div class="invalid-feedback">Alamat pengiriman harus diisi</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Produk yang Dipesan</label>
+                                <select class="form-select" id="produk" required>
+                                    <option value="">Pilih Produk</option>
+                                    <option value="sayur">Sayur Organik Premium</option>
+                                    <option value="beras">Beras Premium</option>
+                                    <option value="buah">Buah Segar Pilihan</option>
+                                    <option value="rempah">Rempah-rempah Pilihan</option>
+                                </select>
+                                <div class="invalid-feedback">Silakan pilih produk</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Jumlah (kg/pack)</label>
+                                <input type="number" class="form-control" id="jumlah" min="1" required>
+                                <div class="invalid-feedback">Jumlah minimal 1</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Catatan Tambahan</label>
+                                <textarea class="form-control" id="catatan" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">Kirim Pesanan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packaging Information -->
+        <div class="mt-5">
+            <h3 class="text-center mb-4">Informasi Pengemasan</h3>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Kemasan Ramah Lingkungan</h5>
+                            <p class="card-text">Kami menggunakan kemasan yang ramah lingkungan untuk semua produk kami:</p>
+                            <ul>
+                                <li>Kardus daur ulang untuk pengiriman</li>
+                                <li>Kantong kertas untuk sayuran dan buah</li>
+                                <li>Wadah biodegradable untuk produk basah</li>
+                                <li>Minimal penggunaan plastik</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Jaminan Kualitas</h5>
+                            <p class="card-text">Setiap produk dikemas dengan standar tinggi untuk menjaga kualitas:</p>
+                            <ul>
+                                <li>Quality control sebelum pengemasan</li>
+                                <li>Pengemasan sesuai jenis produk</li>
+                                <li>Penggunaan ice pack untuk produk tertentu</li>
+                                <li>Garansi produk sampai tujuan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Tentang Kami</h5>
+                    <p>Tani Maju adalah UMKM yang bergerak di bidang pertanian dengan fokus pada produk berkualitas dan ramah lingkungan.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Kontak</h5>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@tanimaju.com<br>
+                        <i class="fas fa-phone me-2"></i> +62 123 4567 890<br>
+                        <i class="fas fa-map-marker-alt me-2"></i> Yogyakarta, Indonesia
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>Ananda Buchori XII RPL © 2025 | Rekayasa Perangkat Lunak <a href="https://smkmuh1-yog.sch.id/" class="text-white" target="_blank">SMK Muhammadiyah 1 Yogyakarta</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Form Validation Script -->
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            let isValid = true;
+            const form = document.getElementById('orderForm');
+            
+            // Reset previous validation states
+            form.querySelectorAll('.is-invalid').forEach(element => {
+                element.classList.remove('is-invalid');
+            });
+            
+            // Validate Name
+            const nama = document.getElementById('nama');
+            if (!nama.value.trim()) {
+                nama.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate Email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate Phone
+            const telepon = document.getElementById('telepon');
+            if (!telepon.value.match(/^[0-9]{10,13}$/)) {
+                telepon.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate Address
+            const alamat = document.getElementById('alamat');
+            if (!alamat.value.trim()) {
+                alamat.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate Product
+            const produk = document.getElementById('produk');
+            if (!produk.value) {
+                produk.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate Quantity
+            const jumlah = document.getElementById('jumlah');
+            if (jumlah.value < 1) {
+                jumlah.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                alert('Pesanan berhasil dikirim! Kami akan menghubungi Anda segera.');
+                form.reset();
+            }
+            
+            return false;
+        }
+    </script>
+</body>
+</html> 

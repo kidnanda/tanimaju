@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Tani Maju</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tani Maju</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pemesanan.html">Pemesanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="container mt-5 py-5">
+        <h2 class="text-center mb-4">Produk Pertanian Kami</h2>
+        
+        <!-- Product Categories -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="btn-group d-flex flex-wrap justify-content-center gap-2" role="group">
+                    <button class="btn btn-outline-success active" data-category="all">Semua</button>
+                    <button class="btn btn-outline-success" data-category="Sayuran">Sayuran</button>
+                    <button class="btn btn-outline-success" data-category="Buah-buahan">Buah-buahan</button>
+                    <button class="btn btn-outline-success" data-category="Beras">Beras</button>
+                    <button class="btn btn-outline-success" data-category="Rempah-rempah">Rempah-rempah</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row" id="products-grid">
+            <!-- Sayuran -->
+            <div class="col-md-4 mb-4 product-item" data-category="Sayuran">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/sayur-organik.jpg" class="card-img-top" alt="Sayur Organik Premium">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Sayuran</span>
+                        <h5 class="card-title">Sayur Organik Premium</h5>
+                        <p class="card-text">Sayuran segar organik berkualitas tinggi, dipetik langsung dari kebun kami.</p>
+                        <p class="text-success fw-bold">Rp 25.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Sayuran">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/sayur-organik.jpg" class="card-img-top" alt="Bayam Organik">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Sayuran</span>
+                        <h5 class="card-title">Bayam Organik</h5>
+                        <p class="card-text">Bayam segar organik kaya nutrisi, cocok untuk berbagai masakan sehat.</p>
+                        <p class="text-success fw-bold">Rp 8.000/ikat</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Sayuran">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/sayur-organik.jpg" class="card-img-top" alt="Wortel Premium">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Sayuran</span>
+                        <h5 class="card-title">Wortel Premium</h5>
+                        <p class="card-text">Wortel segar kaya vitamin A, hasil panen terbaik dari petani lokal.</p>
+                        <p class="text-success fw-bold">Rp 12.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buah-buahan -->
+            <div class="col-md-4 mb-4 product-item" data-category="Buah-buahan">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/buah.jpg" class="card-img-top" alt="Mangga Harum Manis">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Buah-buahan</span>
+                        <h5 class="card-title">Mangga Harum Manis</h5>
+                        <p class="card-text">Mangga harum manis super manis, langsung dari kebun terpercaya.</p>
+                        <p class="text-success fw-bold">Rp 35.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Buah-buahan">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/buah.jpg" class="card-img-top" alt="Jeruk Mandarin Segar">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Buah-buahan</span>
+                        <h5 class="card-title">Jeruk Mandarin Segar</h5>
+                        <p class="card-text">Jeruk mandarin manis dan segar, kaya vitamin C untuk kesehatan.</p>
+                        <p class="text-success fw-bold">Rp 28.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Buah-buahan">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/buah.jpg" class="card-img-top" alt="Pisang Raja Premium">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Buah-buahan</span>
+                        <h5 class="card-title">Pisang Raja Premium</h5>
+                        <p class="card-text">Pisang raja matang sempurna, manis dan lembut.</p>
+                        <p class="text-success fw-bold">Rp 20.000/sisir</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beras -->
+            <div class="col-md-4 mb-4 product-item" data-category="Beras">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/beras.jpg" class="card-img-top" alt="Beras Putih Premium">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Beras</span>
+                        <h5 class="card-title">Beras Putih Premium</h5>
+                        <p class="card-text">Beras putih premium berkualitas tinggi dari petani lokal terpercaya.</p>
+                        <p class="text-success fw-bold">Rp 15.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Beras">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/beras.jpg" class="card-img-top" alt="Beras Merah Organik">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Beras</span>
+                        <h5 class="card-title">Beras Merah Organik</h5>
+                        <p class="card-text">Beras merah organik kaya serat dan nutrisi untuk pola hidup sehat.</p>
+                        <p class="text-success fw-bold">Rp 20.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Beras">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/beras.jpg" class="card-img-top" alt="Beras Hitam Premium">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Beras</span>
+                        <h5 class="card-title">Beras Hitam Premium</h5>
+                        <p class="card-text">Beras hitam premium kaya antioksidan, cocok untuk diet sehat.</p>
+                        <p class="text-success fw-bold">Rp 25.000/kg</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rempah-rempah -->
+            <div class="col-md-4 mb-4 product-item" data-category="Rempah-rempah">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/rempah.jpg" class="card-img-top" alt="Jahe Merah Pilihan">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Rempah-rempah</span>
+                        <h5 class="card-title">Jahe Merah Pilihan</h5>
+                        <p class="card-text">Jahe merah berkualitas tinggi untuk jamu dan minuman sehat.</p>
+                        <p class="text-success fw-bold">Rp 15.000/ons</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Rempah-rempah">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/rempah.jpg" class="card-img-top" alt="Kunyit Premium">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Rempah-rempah</span>
+                        <h5 class="card-title">Kunyit Premium</h5>
+                        <p class="card-text">Kunyit premium berkhasiat tinggi untuk jamu tradisional.</p>
+                        <p class="text-success fw-bold">Rp 10.000/ons</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product-item" data-category="Rempah-rempah">
+                <div class="card product-card h-100">
+                    <img src="assets/img/products/rempah.jpg" class="card-img-top" alt="Lengkuas Segar">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Rempah-rempah</span>
+                        <h5 class="card-title">Lengkuas Segar</h5>
+                        <p class="card-text">Lengkuas segar berkualitas untuk bumbu masakan tradisional.</p>
+                        <p class="text-success fw-bold">Rp 8.000/ons</p>
+                        <a href="pemesanan.html" class="btn btn-success w-100">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Tentang Kami</h5>
+                    <p>Tani Maju adalah UMKM yang bergerak di bidang pertanian dengan fokus pada produk berkualitas dan ramah lingkungan.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Kontak</h5>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@tanimaju.com<br>
+                        <i class="fas fa-phone me-2"></i> +62 123 4567 890<br>
+                        <i class="fas fa-map-marker-alt me-2"></i> Yogyakarta, Indonesia
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>Ananda Buchori XII RPL © 2025 | Rekayasa Perangkat Lunak <a href="https://smkmuh1-yog.sch.id/" class="text-white" target="_blank">SMK Muhammadiyah 1 Yogyakarta</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Product Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.btn-group button');
+            const products = document.querySelectorAll('.product-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter products
+                    products.forEach(product => {
+                        if (category === 'all' || product.getAttribute('data-category') === category) {
+                            product.style.display = 'block';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
